@@ -1,0 +1,66 @@
+# Ejecutables compilados
+*.exe
+*.out
+*.app
+
+# Archivos de compilación de C++
+*.o
+*.obj
+*.pdb
+*.ilk
+*.idb
+*.ipch
+*.pch
+
+# Archivos de enlace
+*.exp
+*.lib
+*.dll
+
+# Carpetas de compilación
+Debug/
+Release/
+x64/
+x86/
+build/
+out/
+
+# Resultados generados (CSV y gráficas)
+problema1/resultados1.csv
+problema1/grafica1.png
+problema2/resultados2.csv
+problema2/grafica2.png
+problema3/resultados3.csv
+problema3/grafica3.png
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/
+
+# Visual Studio Code
+.vscode/
+*.code-workspace
+
+# Visual Studio
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Archivos temporales
+*.tmp
+*.bak
+*.swp
+*~
