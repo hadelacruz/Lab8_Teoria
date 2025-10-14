@@ -8,14 +8,12 @@ using namespace std;
 using namespace chrono;
 
 long long function(int n) {
+    int i, j, k;
     long long counter = 0;
     
-    // for (i = n/2; i <= n; i++)
-    for (int i = n / 2; i <= n; i++) {
-        // for (j = 1; j+n/2 <= n; j++)
-        for (int j = 1; j + n / 2 <= n; j++) {
-            // for (k = 1; k <= n; k = k*2)
-            for (int k = 1; k <= n; k = k * 2) {
+    for (i = n/2; i <= n; i++) {
+        for (j = 1; j+n/2 <= n; j++) {
+            for (k = 1; k <= n; k = k*2) {
                 counter++;
             }
         }
@@ -67,7 +65,7 @@ void profileFunction(vector<int> n_values) {
 
 int main() {
     // Valores de n a probar
-    vector<int> n_values = {1, 10, 100, 1000, 10000, 100000};
+    vector<int> n_values = {1, 10, 100, 1000, 10000, 100000, 1000000};
     
     profileFunction(n_values);
     

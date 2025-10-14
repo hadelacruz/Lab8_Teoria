@@ -89,17 +89,8 @@ void function(int n) {
 - **Complejidad total**: O(n) × O(n) × O(log n) = **O(n² log n)**
 
 ### Valores de n probados
-`1, 10, 100, 1,000, 10,000, 100,000`
+`1, 10, 100, 1,000, 10,000, 100,000, 1,000,000`
 
-### Resultados Típicos
-
-| n | Tiempo (s) | Operaciones |
-|---|---|---|
-| 1,000 | ~0.001 | 2,505,000 |
-| 10,000 | ~0.111 | 350,070,000 |
-| 100,000 | ~13.04 | 42,500,850,000 |
-
----
 
 ## 📊 Problema 2 - Complejidad O(n)
 
@@ -128,15 +119,6 @@ El `break` hace que el bucle interno **siempre ejecute exactamente 1 iteración*
 ### Valores de n probados
 `1, 10, 100, 1,000, 10,000, 100,000, 1,000,000`
 
-### Resultados Típicos
-
-| n | Tiempo (s) | Operaciones |
-|---|---|---|
-| 10,000 | <0.0001 | 10,000 |
-| 100,000 | <0.001 | 100,000 |
-| 1,000,000 | <0.01 | 1,000,000 |
-
----
 
 ## 📊 Problema 3 - Complejidad O(n²)
 
@@ -159,35 +141,6 @@ void function(int n) {
 
 ### Valores de n probados
 `1, 10, 100, 1,000, 10,000, 100,000, 1,000,000`
-
-### Resultados Típicos
-
-| n | Tiempo (s) | Operaciones |
-|---|---|---|
-| 1,000 | <0.0001 | 83,250 |
-| 10,000 | <0.001 | 8,332,500 |
-| 100,000 | <0.01 | 833,325,000 |
-| 1,000,000 | <0.1 | 83,333,250,000 |
-
-### Nota sobre eficiencia
-Aunque es O(n²), los factores constantes (n/3 × n/4 = n²/12) lo hacen ~12x más eficiente que un O(n²) estándar.
-
----
-
-## ⚡ Comparación de Complejidades
-
-| n | Problema 1 (O(n² log n)) | Problema 2 (O(n)) | Problema 3 (O(n²)) | 
-|---|---|---|---|
-| 10,000 | 0.136 s | <0.0001 s | <0.001 s |
-| 100,000 | 13.71 s | <0.001 s | <0.01 s |
-| 1,000,000 | ~2-3 horas | <0.01 s | <0.1 s |
-
-### Ranking de Eficiencia (de más rápido a más lento)
-1. 🥇 **Problema 2** - O(n) - Lineal
-2. 🥈 **Problema 3** - O(n²) - Cuadrática
-3. 🥉 **Problema 1** - O(n² log n) - Cuasi-cúbica
-
-**Conclusión**: La complejidad algorítmica tiene un impacto exponencial en el rendimiento.
 
 ---
 

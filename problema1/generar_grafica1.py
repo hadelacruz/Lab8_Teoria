@@ -88,8 +88,8 @@ def generar_graficas():
     print("\n📈 ANÁLISIS:")
     print(f"   • Complejidad: O(n² log n)")
     print(f"   • Rango n: {df['n'].min()} - {df['n'].max():,}")
-    print(f"   • Tiempo máximo: {df['tiempo_segundos'].max():.2f} segundos")
-    print(f"   • Operaciones máximas: {df['operaciones'].max():,}")
+    print(f"   • Tiempo mínimo: {df['tiempo_segundos'].min():.6f} segundos")
+    print(f"   • Tiempo máximo: {df['tiempo_segundos'].max():.6f} segundos")
     print("\n¡Completado! 🎉\n")
 
 

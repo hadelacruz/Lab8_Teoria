@@ -7,21 +7,17 @@
 using namespace std;
 using namespace chrono;
 
-long long function(int n) {
-    if (n <= 1) return 0;
+void function(int n) {
+    if (n <= 1) return;
     
-    long long counter = 0;
     int i, j;
     
     for (i = 1; i <= n; i++) {
         for (j = 1; j <= n; j++) {
-            // printf("Sequence\n");
-            counter++;
+            printf("Sequence\n");
             break;
         }
     }
-    
-    return counter;
 }
 
 void profileFunction(vector<int> n_values) {
@@ -31,19 +27,18 @@ void profileFunction(vector<int> n_values) {
     
     // Archivo CSV para resultados
     ofstream csvFile("resultados2.csv");
-    csvFile << "n,tiempo_segundos,operaciones" << endl;
+    csvFile << "n,tiempo_segundos" << endl;
     
     cout << "\n" << setw(12) << "n" 
-         << setw(20) << "tiempo (s)" 
-         << setw(20) << "operaciones" << endl;
-    cout << string(52, '-') << endl;
+         << setw(20) << "tiempo (s)" << endl;
+    cout << string(32, '-') << endl;
     
     for (int n : n_values) {
         cout << "Ejecutando con n = " << n << "..." << flush;
         
         // Medir tiempo
         auto start = high_resolution_clock::now();
-        long long operations = function(n);
+        function(n);
         auto end = high_resolution_clock::now();
         
         duration<double> elapsed = end - start;
@@ -51,11 +46,10 @@ void profileFunction(vector<int> n_values) {
         
         // Mostrar resultados
         cout << "\r" << setw(12) << n 
-             << setw(20) << fixed << setprecision(6) << seconds
-             << setw(20) << operations << endl;
+             << setw(20) << fixed << setprecision(6) << seconds << endl;
         
         // Guardar en CSV
-        csvFile << n << "," << seconds << "," << operations << endl;
+        csvFile << n << "," << seconds << endl;
     }
     
     csvFile.close();
