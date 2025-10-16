@@ -4,6 +4,9 @@ Laboratorio de Teoría de Computación que implementa y analiza la complejidad t
 
 ---
 
+[![Ver video en YouTube](https://img.youtube.com/vi/mAVceSycYTs/0.jpg)](https://youtu.be/mAVceSycYTs)
+
+
 ## 📁 Estructura del Proyecto
 
 ```
